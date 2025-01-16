@@ -43,6 +43,20 @@ struct user_struct {
 #endif
 };
 
+ #ifdef CONFIG_KSU_SUSFS
+      u64 android_kabi_reserved2;
+  #endif
+      // Android KABI reserved fields
+      u64 android_kabi_reserved1;
+      u64 android_kabi_reserved3;
+      u64 android_kabi_reserved4;
+      u64 android_kabi_reserved5;
+      u64 android_kabi_reserved6;
+      u64 android_kabi_reserved7;
+      u64 android_kabi_reserved8;
+
+};
+
 extern int uids_sysfs_init(void);
 
 extern struct user_struct *find_user(kuid_t);
